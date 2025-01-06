@@ -1,0 +1,93 @@
+<p-panel header="Pipes Basicos">
+  <!-- <h1>Pipes Basicos</h1> -->
+  <p>
+    Pipes Incluidos en Angular - Usualmente en el Common Module
+  </p>
+</p-panel>
+
+
+<div class="grid mt-2">
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{nameLower | uppercase}}
+    </p-card>
+
+  </div>
+  <div class="col-12 md:col-4">
+
+    <p-card header="lowercase">
+      {{nameUpper | lowercase}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+
+    <p-card header="tittlecase">
+      {{nameFull | titlecase}}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+
+    <p-card header="tittlecase">
+      <ol>
+        <li>
+          fecha
+        </li>
+        <li>
+          fecha | date
+        </li>
+        <li>
+          fecha | date; 'short'
+        </li>
+        <li>
+          fecha | date; 'Long'
+        </li>
+        <li>
+          fecha | date; 'MMM'
+        </li>
+        <li>
+          fecha | date; 'MMM dd , yyyy'
+        </li>
+      </ol>
+      <hr>
+      <ol>
+        <li>fecha | date: 'long' : 'GMT-6' </li>
+        <li>fecha | date: 'long' : 'GMT-4' </li>
+        <li>fecha | date: 'long' : 'GMT-4' : 'es-PE' </li>
+        <li>fecha | date: 'long' : 'GMT-4' : 'fr-CA' </li>
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+
+    <p-card header="tittlecase">
+      <ol>
+        <li>
+          {{customDate}}
+        </li>
+        <li>
+          {{customDate | date}}
+        </li>
+        <li>
+          {{customDate | date:'short'}}
+        </li>
+        <li>
+          {{customDate | date:'long'}}
+        </li>
+        <li>
+          {{customDate | date:'MMM'}}
+        </li>
+        <li>
+          {{customDate | date:'MMM dd , yyyy'}}
+        </li>
+      </ol>
+      <hr>
+      <ol>
+        <li>{{customDate | date: 'long' : 'GMT-6' }}</li>
+        <li>{{customDate | date: 'long' : 'GMT-4'}} </li>
+        <li>{{customDate | date: 'long' : '' : 'es-PE'}} </li>
+        <li>{{customDate | date: 'long' : '' : 'fr-CA'}} </li>
+      </ol>
+    </p-card>
+  </div>
+
+</div>
